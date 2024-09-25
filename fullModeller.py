@@ -16,7 +16,6 @@ def basic_derivative():
     time_points = np.linspace(0, timeRange, int(timeRange / timeDelta) + 1)
     dfdx = [derivative(function, x, dx=timeDelta) for x in time_points]
 
-    print("time_points:", time_points)
     print("dfdx:", dfdx)
 
     plt.plot(time_points, dfdx)
@@ -28,10 +27,8 @@ def basic_derivative():
 
 # что то своего рода main menu  и запуск разных вещей
 while True:
-	print("-------------------------------")
 	print("1) derivative x(t) v(t) or I(q)")
 	mode = int(input("select a physics system >>> "))
-	print("-------------------------------")
 
 	if mode == 1:
 		basic_derivative()
